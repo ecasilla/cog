@@ -30,6 +30,7 @@ from ..predictor import (
     load_predictor_from_ref,
 )
 from .runner import PredictionRunner, RunnerBusyError, UnknownPredictionError
+from .router import find_router
 
 log = structlog.get_logger("cog.server.http")
 
@@ -54,6 +55,10 @@ def create_app(
         title="Cog",  # TODO: mention model name?
         # version=None # TODO
     )
+
+    custom_router = find_router(config)
+    if custom_router is not None:
+        app.include_router(custom_router)
 
     app.state.health = Health.STARTING
     app.state.setup_result = None

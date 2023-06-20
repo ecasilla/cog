@@ -131,6 +131,11 @@
       "type": "string",
       "description": "The pointer to the `Predictor` object in your code, which defines how predictions are run on your model."
     },
+    "router": {
+      "$id": "#/properties/router",
+      "type": "string",
+      "description": "The pointer to the `Router` object in your code, which defines how extra routes are added to the server."
+    },
     "train": {
       "$id": "#/properties/train",
       "type": "string",

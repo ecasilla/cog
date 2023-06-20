@@ -11,7 +11,7 @@ GO := go
 GOOS := $(shell $(GO) env GOOS)
 GOARCH := $(shell $(GO) env GOARCH)
 
-PYTHON := python
+PYTHON := python3
 PYTEST := $(PYTHON) -m pytest
 MYPY := $(PYTHON) -m mypy
 RUFF := $(PYTHON) -m ruff

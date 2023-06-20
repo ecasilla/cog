@@ -1,0 +1,16 @@
+---
+name: Basic Speak to text AI Machine
+short_name: whisper
+version: '0.1.0'
+endpoints:
+- uri: speach-to-text
+  price_per_call: 0.034
+  price_per_input_mb: 0.001
+  input: Audio:Base64
+  doc: |- 
+    # Speak to text
+    This endpoint converts audio to text
+  doc_url: https://hypercycle.ai/docs
+license: Open
+terms-of-service: https://hypercycle.ai/tos
+author: Hypercycle
